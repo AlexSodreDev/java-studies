@@ -20,7 +20,7 @@ public class VendasApplication {
             clientes.save(new Cliente("Alexandre"));
             clientes.save(new Cliente("Cliente 2"));
 
-            List<Cliente> existe = clientes.encontrarPorNome("Alexandre");
+            List<Cliente> existe = clientes.encontrarPorNomeConsultaNativa("Alexandre");
             System.out.println("O cliente Alexandre existe? " + existe);
         };
     }
