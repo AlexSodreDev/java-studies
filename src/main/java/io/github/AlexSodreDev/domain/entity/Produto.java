@@ -1,11 +1,21 @@
 package io.github.AlexSodreDev.domain.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
+@Entity
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private Integer id;
+
+    @Column
     private String descricao;
+
+    @Column(name = "preco_unitario", length = 20, precision = 2)
     private BigDecimal preco;
 
     public Integer getId() {
